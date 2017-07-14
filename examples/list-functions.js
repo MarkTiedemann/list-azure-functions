@@ -1,9 +1,9 @@
-const getToken = require('./lib/get-token')
-const getSubscriptions = require('./lib/get-subscriptions')
-const getResourceGroups = require('./lib/get-resource-groups')
-const getFunctionApps = require('./lib/get-function-apps')
-const getFunctionSlots = require('./lib/get-function-slots')
-const getFunctions = require('./lib/get-functions')
+const getToken = require('../lib/get-token')
+const getSubscriptions = require('../lib/get-subscriptions')
+const getResourceGroups = require('../lib/get-resource-groups')
+const getFunctionApps = require('../lib/get-function-apps')
+const getFunctionSlots = require('../lib/get-function-slots')
+const getFunctions = require('../lib/get-functions')
 
 const email = process.env.AZURE_EMAIL
 const password = process.env.AZURE_PASSWORD
@@ -18,7 +18,7 @@ getToken({ email, password }).then(token => {
               // get functions that are not in a slot
               getFunctions({ token, subscription, resourceGroup, functionApp }).then(functions => {
                 functions.map(f => f.properties.name).forEach(funct1on => {
-                  log({ subscription, resourceGroup, functionApp, funct1on })
+                  log({ subscription, resourceGroup, functionApp, funct1on, functionSlot: 'default' })
                 })
               })
               // get functions that are in a slot
@@ -40,7 +40,7 @@ getToken({ email, password }).then(token => {
   })
 })
 
-function log ({ subscription, resourceGroup, functionApp, functionSlot = 'default', funct1on }) {
+function log ({ subscription, resourceGroup, functionApp, functionSlot, funct1on }) {
   console.log('\n' + [
    `Subscription:   ${subscription}`,
    `Resource Group: ${resourceGroup}`,
