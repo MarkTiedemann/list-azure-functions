@@ -26,11 +26,13 @@
 Subscription:   {subscription1}
 Resource Group: {group1}
 Function App:   {functionApp1}
+Function Slot:  {functionSlot1}
 Function:       {function1}
 
 Subscription:   {subscription2}
 Resource Group: {group2}
 Function App:   {functionApp2}
+Function Slot:  {functionSlot2}
 Function:       {function2}
 ```
 
