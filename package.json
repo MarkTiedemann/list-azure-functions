@@ -3,5 +3,24 @@
   "version": "0.1.0",
   "dependencies": {
     "node-fetch": "^1.7.1"
-  }
+  },
+  "description": "Example of how to list all of your Azure Functions programmatically.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellohq-io/list-azure-functions.git"
+  },
+  "keywords": [
+    "list",
+    "azure",
+    "functions",
+    "apps",
+    "slots",
+    "proxies"
+  ],
+  "author": "Mark Tiedemann <mark@hellohq.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hellohq-io/list-azure-functions/issues"
+  },
+  "homepage": "https://github.com/hellohq-io/list-azure-functions"
 }
