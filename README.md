@@ -6,17 +6,25 @@
 
 ## Quickstart
 
+**Setup:**
+
 ```bat
+:: clone the repository
 λ git clone https://github.com/marktiedemann/list-azure-functions
 λ cd list-azure-functions
+
+:: install the dependencies
 λ npm install
 λ cd examples
 
-:: set required env vars
+:: set required env variables
 λ set AZURE_EMAIL=you@example.com
 λ set AZURE_PASSWORD=superSecret
+```
 
-:: run functions example
+**List functions:**
+
+```
 λ node list-functions
 
 Subscription:   {subscription1}
@@ -30,8 +38,11 @@ Resource Group: {group2}
 Function App:   {functionApp2}
 Function Slot:  {functionSlot2}
 Function:       {function2}
+```
 
-:: run function apps example
+**List function apps:**
+
+```
 λ node list-function-apps
 
 Subscription:   {subscription1}
@@ -41,8 +52,11 @@ Function App:   {functionApp1}
 Subscription:   {subscription2}
 Resource Group: {group2}
 Function App:   {functionApp2}
+```
 
-:: run function slots example
+**List function slots:**
+
+```
 λ node list-function-slots
 
 Subscription:   {subscription1}
@@ -54,8 +68,11 @@ Subscription:   {subscription2}
 Resource Group: {group2}
 Function App:   {functionApp2}
 Function Slot:  {functionSlot2}
+```
 
-:: run function proxies example
+**List function proxies:**
+
+```
 λ node list-function-proxies
 
 Subscription:   {subscription1}
